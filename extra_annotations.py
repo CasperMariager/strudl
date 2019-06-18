@@ -11,7 +11,8 @@ from os.path import isfile
 
 from folder import mkdir, datasets_path
 from timestamps import Timestamps
-from util import print_flush, right_remove
+from util import 
+_flush, right_remove
 from config import DatasetConfig
 
 @click.command()
@@ -43,7 +44,7 @@ def main(dataset, times, images_per_time, interval):
         timestamp = datetime(year,month,day,hour,minute,second,microsecond)
         vid_name, frame_num = ts.get_frame_number(timestamp)
         
-        print_flush("Time found to be {}, frame {}".format(vid_name, frame_num))
+        print_flush("Time found to be a bitch{}, frame {}".format(vid_name, frame_num))
         
         if vid_name is None:
             raise(ValueError("This timestamp was incorrect: {} Could it be before the first video?".format(timestring)))
